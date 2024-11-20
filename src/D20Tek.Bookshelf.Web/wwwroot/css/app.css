@@ -101,3 +101,76 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+
+/* Lock footer to the bottom */
+.footer-nav {
+    position: fixed; /* Fix the footer to the bottom of the viewport */
+    bottom: 0; /* Align to the bottom of the page */
+    left: 0; /* Extend to the left edge */
+    right: 0; /* Extend to the right edge */
+    z-index: 10; /* Ensure the footer stays above content */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for visual appeal */
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 80px; /* Footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content padding to prevent overlap */
+.main-content {
+    padding-bottom: 80px; /* Add padding equal to the footer height */
+}
+
+/* Center navigation items and style */
+.footer-nav .nav-items {
+    width: 100%; /* Allow the container to stretch */
+    max-width: 500px; /* Limit width for larger screens */
+    display: flex;
+    justify-content: space-between; /* Ensure buttons remain next to each other */
+}
+
+/* NavLink button styling */
+.footer-nav .nav-link {
+    text-align: center; /* Center-align text (including labels) */
+    font-size: 1rem; /* Default font size */
+    color: #6c757d; /* Default gray color */
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    border-radius: 0.5rem;
+    width: 20%; /* Ensure buttons are evenly sized */
+    display: flex;
+    flex-direction: column; /* Stack the icon and label vertically */
+    align-items: center; /* Center both icon and label horizontally */
+    justify-content: center;
+    padding: 0.5rem; /* Adjust padding for a balanced look */
+    border: 1px solid transparent; /* Default to transparent border */
+}
+
+    /* Icon styling */
+    .footer-nav .nav-link i {
+        font-size: 1.2rem; /* Icon size */
+        margin-bottom: 0.05rem; /* Space between the icon and label */
+        display: block; /* Ensure the icon stays on a separate line */
+    }
+
+/* Label styling */
+.footer-nav .nav-label {
+    font-size: 0.7rem; /* Label font size */
+    display: block; /* Ensure the label stays on its own line */
+    text-align: center; /* Center-align the label */
+}
+
+/* Active link */
+.footer-nav .nav-link.active {
+    background-color: #bebebe; /* Light gray for active button */
+    color: black;
+    border-color: black; /* Add black border for active links */
+}
+
+/* Hover effect */
+.footer-nav .nav-link:hover {
+    background-color: #efefef; /* Slightly darker gray on hover */
+    color: black;
+    border-color: black; /* Add black border on hover */
+}
