@@ -1,6 +1,4 @@
-﻿using D20Tek.Functional;
-
-namespace D20Tek.Bookshelf.Web.Domain;
+﻿namespace D20Tek.Bookshelf.Web.Domain;
 
 public sealed class Editions
 {
@@ -15,6 +13,5 @@ public sealed class Editions
         new("5ed2024", "Dungeons & Dragons 2024", "DnD2024", 2024, 2025)
     ];
 
-    public static Option<DndEdition> GetEdition(string code) =>
-        _editions.FirstOrDefault(x => x.Code == code).ToOption();
+    public static DndEdition GetEdition(string code) => _editions.First(x => x.Code == code);
 }

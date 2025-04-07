@@ -4,6 +4,8 @@ public class BookDetails
 {
     public string EditionCode { get; }
 
+    public DndEdition Edition { get; }
+
     public DateOnly PublishedOn { get; }
 
     public string ImageLink { get; }
@@ -20,6 +22,7 @@ public class BookDetails
         ArgumentNullException.ThrowIfNullOrEmpty(tsrNum, nameof(tsrNum));
 
         EditionCode = editionCode;
+        Edition = Editions.GetEdition(editionCode);
         PublishedOn = publishedOn;
         ImageLink = imageLink;
         Pages = pages;
