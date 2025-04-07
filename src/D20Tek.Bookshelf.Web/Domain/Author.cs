@@ -2,13 +2,16 @@
 
 public sealed class Author
 {
-    public string Name { get; }
+    public required string Name { get; init; }
 
-    public Url Link { get; }
+    public required string Url { get; init; }
 
-    public Author(string name, Url link)
+    public Author(string name, string link)
     {
+        ArgumentNullException.ThrowIfNullOrEmpty(name, nameof(name));
+        ArgumentNullException.ThrowIfNullOrEmpty(link, nameof(link));
+
         Name = name;
-        Link = link;
+        Url = link;
     }
 }

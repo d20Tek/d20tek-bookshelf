@@ -2,25 +2,27 @@
 
 public class BookDetails
 {
-    public Editions Edition { get; }
+    public string EditionCode { get; }
 
     public DateOnly PublishedOn { get; }
 
-    public Url ImageLink { get; }
+    public string ImageLink { get; }
 
     public int Pages { get; }
 
     public string TsrNum { get; }
 
-    public string Isbn { get; }
-
-    public BookDetails(Editions edition, DateOnly publishedOn, Url imageLink, int pages, string tsrNum, string isbn)
+    public BookDetails(string editionCode, DateOnly publishedOn, string imageLink, int pages, string tsrNum)
     {
-        Edition = edition;
+        ArgumentNullException.ThrowIfNullOrEmpty(editionCode, nameof(editionCode));
+        ArgumentNullException.ThrowIfNullOrEmpty(imageLink, nameof(imageLink));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(pages, 0, nameof(pages));
+        ArgumentNullException.ThrowIfNullOrEmpty(tsrNum, nameof(tsrNum));
+
+        EditionCode = editionCode;
         PublishedOn = publishedOn;
         ImageLink = imageLink;
         Pages = pages;
         TsrNum = tsrNum;
-        Isbn = isbn;
     }
 }
