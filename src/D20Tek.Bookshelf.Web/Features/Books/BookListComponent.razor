@@ -1,0 +1,18 @@
+﻿@inject IBooksService _service;
+<h3>Books</h3>
+
+@if (_books is null)
+{
+    <div>Loading...</div>
+}
+else if (_books.Any() is false)
+{
+    <div>No books in the database.</div>
+}
+else
+{
+    foreach (var book in _books)
+    {
+        <div>@book.Title [Id: @book.Id]</div>
+    }
+}

@@ -1,8 +1,6 @@
-﻿using D20Tek.Bookshelf.Web.Domain;
+﻿namespace D20Tek.Bookshelf.Web.Features.Books;
 
-namespace D20Tek.Bookshelf.Web.Features;
-
-public partial class Home
+public partial class BookListComponent
 {
     private BookEntity[]? _books;
 
