@@ -1,15 +1,22 @@
 [
   {
-    "id": "1234",
+    "id": "TSR-2002",
     "title": "Dungeons & Dragons",
-    "authors": [],
-    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets" ],
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
+    ],
+    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets. Volume 1: Men & Magic, Volume 2: Monsters & Treasure, Volume 3: Underworld & Wilderness Adventures" ],
     "details": {
       "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
       "publishedOn": "1974",
-      "imageLink": "images/books/odnd.png",
+      "imageLink": "images/books/odnd-box.jpg",
       "pages": 112,
-      "tsrNum": ""
+      "mediaType": "Boxed set"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2002"
     }
   }
 ]

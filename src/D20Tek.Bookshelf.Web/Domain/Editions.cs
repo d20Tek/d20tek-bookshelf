@@ -1,6 +1,6 @@
 ﻿namespace D20Tek.Bookshelf.Web.Domain;
 
-public sealed class Editions
+internal sealed class Editions
 {
     private static readonly DndEdition[] _editions =
     [

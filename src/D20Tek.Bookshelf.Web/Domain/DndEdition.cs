@@ -1,6 +1,6 @@
 ﻿namespace D20Tek.Bookshelf.Web.Domain;
 
-public sealed class DndEdition
+internal sealed class DndEdition
 {
     public string Code { get; }
 

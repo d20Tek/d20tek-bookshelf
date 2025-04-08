@@ -2,7 +2,7 @@
 
 namespace D20Tek.Bookshelf.Web.Features.Books;
 
-public interface IBooksService
+internal interface IBooksService
 {
     public Task<BookEntity[]> GetAll();
 

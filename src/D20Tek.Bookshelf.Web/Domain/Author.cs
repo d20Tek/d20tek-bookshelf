@@ -1,17 +1,17 @@
 ﻿namespace D20Tek.Bookshelf.Web.Domain;
 
-public sealed class Author
+internal sealed class Author
 {
-    public required string Name { get; init; }
+    public string Name { get; init; }
 
-    public required string Url { get; init; }
+    public string Url { get; init; }
 
-    public Author(string name, string link)
+    public Author(string name, string url)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name, nameof(name));
-        ArgumentNullException.ThrowIfNullOrEmpty(link, nameof(link));
+        ArgumentNullException.ThrowIfNullOrEmpty(url, nameof(url));
 
         Name = name;
-        Url = link;
+        Url = url;
     }
 }
