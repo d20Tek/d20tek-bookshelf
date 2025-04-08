@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1234",
+    "title": "Dungeons & Dragons",
+    "authors": [],
+    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets" ],
+    "details": {
+      "editionCode": "Oed",
+      "publishedOn": "1974",
+      "imageLink": "images/books/odnd.png",
+      "pages": 112,
+      "tsrNum": ""
+    }
+  }
+]

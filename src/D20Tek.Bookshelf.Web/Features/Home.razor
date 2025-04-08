@@ -1,4 +1,23 @@
 ﻿@page "/"
+@using D20Tek.Bookshelf.Web.Features.Books
+@inject IBooksService _service;
 
 <p>Welcome to the <b>Eldritch Library</b>! We have amassed the full listing of Dungeons and Dragons books from the various different editions. 
    Look through our ancient tomes to find the ones that interest you most. And keep track of your own collection of these books.</p>
+<hr />
+
+@if (_books is null)
+{
+    <div>Loading...</div>
+}
+else if (_books.Any() is false)
+{
+    <div>No books in the database.</div>
+}
+else
+{
+    foreach (var book in _books)
+    {
+    <div>@book.Title [ISBN: @book.Id]</div>
+    }
+}

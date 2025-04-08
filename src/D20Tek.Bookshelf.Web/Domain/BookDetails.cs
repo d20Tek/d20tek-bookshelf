@@ -1,4 +1,4 @@
-﻿namespace D20Tek.Bookshelf.Web.Domain;
+﻿    namespace D20Tek.Bookshelf.Web.Domain;
 
 public class BookDetails
 {
@@ -6,7 +6,7 @@ public class BookDetails
 
     public DndEdition Edition { get; }
 
-    public DateOnly PublishedOn { get; }
+    public string PublishedOn { get; }
 
     public string ImageLink { get; }
 
@@ -14,12 +14,11 @@ public class BookDetails
 
     public string TsrNum { get; }
 
-    public BookDetails(string editionCode, DateOnly publishedOn, string imageLink, int pages, string tsrNum)
+    public BookDetails(string editionCode, string publishedOn, string imageLink, int pages, string tsrNum)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(editionCode, nameof(editionCode));
         ArgumentNullException.ThrowIfNullOrEmpty(imageLink, nameof(imageLink));
         ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(pages, 0, nameof(pages));
-        ArgumentNullException.ThrowIfNullOrEmpty(tsrNum, nameof(tsrNum));
 
         EditionCode = editionCode;
         Edition = Editions.GetEdition(editionCode);
