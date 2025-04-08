@@ -11,8 +11,34 @@ else if (_books.Any() is false)
 }
 else
 {
-    foreach (var book in _books)
-    {
-        <div>@book.Title [Id: @book.Id]</div>
-    }
+    <div class="container my-4">
+        <div class="row row-cols-1 gy-3">
+        @foreach (var book in _books)
+        {
+            <div class="col">
+                <div class="d-flex p-1 bg-darker-than-dark rounded shadow-sm">
+                    <img src="@book.Details.ImageLink"
+                         alt="@book.Title"
+                         class="img-thumbnail me-3"
+                         style="width: 64px; height: 90px; object-fit: cover;" />
+
+                    <div class="flex-grow-1 overflow-hidden">
+                        <div class="fw-bold text-truncate">@book.Title</div>
+                        <div class="small text-muted text-truncate">@book.Description.FirstOrDefault()</div>
+                        <div class="text-muted small mt-1">@book.Details.Edition.Name</div>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
 }
+
+<style>
+.bg-darker-than-dark {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 1px solid gray;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+</style>
