@@ -3,14 +3,8 @@
     "id": "TSR-2002",
     "title": "Dungeons & Dragons Boxed Set",
     "authors": [
-      {
-        "name": "Gary Gygax",
-        "url": "https://en.wikipedia.org/wiki/Gary_Gygax"
-      },
-      {
-        "name": "Dave Arneson",
-        "url": "https://en.wikipedia.org/wiki/Dave_Arneson"
-      }
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
     ],
     "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets. Volume 1: Men & Magic, Volume 2: Monsters & Treasure, Volume 3: Underworld & Wilderness Adventures." ],
     "details": {
@@ -43,6 +37,84 @@
     },
     "altIds": {
       "tsrNum": "TSR-2003"
+    }
+  },
+  {
+    "id": "TSR-2004",
+    "title": "Supplement II: Blackmoor",
+    "authors": [
+      { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
+    ],
+    "description": [ "The second supplement for the original D&D game, Blackmoor added rules, monsters, treasure and is notable for containing the first published adventure for a role-playing game - \"Temple of the Frog\". Like Greyhawk, its focus was more on rules than setting material, despite the name." ],
+    "details": {
+      "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
+      "publishedOn": "1975",
+      "imageLink": "images/books/odnd-blackmoor.jpg",
+      "pages": 60,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2004"
+    }
+  },
+  {
+    "id": "TSR-2005",
+    "title": "Supplement III: Eldritch Wizardry",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "Brian Blume", "url": "https://en.wikipedia.org/wiki/Brian_Blume" }
+    ],
+    "description": [ "Eldritch Wizardry was the third supplement for the original D&D game and is most notable for introducing some of its most famous monsters, such as demons and mind flayers." ],
+    "details": {
+      "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
+      "publishedOn": "1976",
+      "imageLink": "images/books/odnd-eldritch-wizardry.jpg",
+      "pages": 60,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2005"
+    }
+  },
+  {
+    "id": "TSR-2006",
+    "title": "Supplement IV: Gods, Demi-Gods & Heroes",
+    "authors": [
+      { "name": "Robert J. Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" },
+      { "name": "James M. Ward", "url": "https://en.wikipedia.org/wiki/James_M._Ward" }
+    ],
+    "description": [ "Gods, Demi-Gods & Heroes was the fourth supplement for the original D&D game and adapted a variety of real-world and fictional pantheons for use in the D&D game." ],
+    "details": {
+      "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
+      "publishedOn": "1976",
+      "imageLink": "images/books/odnd-gods-heroes.png",
+      "pages": 72,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2006"
+    }
+  },
+  {
+    "id": "TSR-2007",
+    "title": "Supplement V: Swords & Spells",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
+    ],
+    "description": [ "The fifth and final supplement for the original D&D game focused on providing a new diceless set of rules for large battles between armies." ],
+    "details": {
+      "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
+      "publishedOn": "1976",
+      "imageLink": "images/books/odnd-swords-spells.jpg",
+      "pages": 45,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2007"
     }
   }
 ]
