@@ -11,34 +11,25 @@ else if (_books.Any() is false)
 }
 else
 {
-    <div class="container my-4">
-        <div class="row row-cols-1 gy-3">
+    <table class="table table-sm w-100">
+        <tbody>
         @foreach (var book in _books)
         {
-            <div class="col">
-                <div class="d-flex p-1 bg-darker-than-dark rounded shadow-sm">
+            <tr class="book-row">
+                <td class="bg-transparent fixed-col">
                     <img src="@book.Details.ImageLink"
                          alt="@book.Title"
-                         class="img-thumbnail me-3"
-                         style="width: 64px; height: 90px; object-fit: cover;" />
-
-                    <div class="flex-grow-1 overflow-hidden">
-                        <div class="fw-bold text-truncate">@book.Title</div>
-                        <div class="small text-muted text-truncate">@book.Description.FirstOrDefault()</div>
-                        <div class="text-muted small mt-1">@book.Details.Edition.Name</div>
+                         class="me-3 rounded book-image" />
+                </td>
+                <td class="bg-transparent flex-col">
+                    <div class="fw-bold text-truncate" title="@book.Title">@book.Title</div>
+                    <div class="small text-muted text-truncate">@book.Description.FirstOrDefault()</div>
+                    <div class="text-muted small mt-4 text-truncate">
+                        <strong>Edition:</strong> @book.Details.Edition.Name
                     </div>
-                </div>
-            </div>
+                </td>
+            </tr>
         }
-        </div>
-    </div>
+        </tbody>
+    </table>
 }
-
-<style>
-.bg-darker-than-dark {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: 1px solid gray;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
-}
-</style>

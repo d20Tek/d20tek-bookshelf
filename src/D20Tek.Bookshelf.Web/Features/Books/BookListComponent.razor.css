@@ -1,0 +1,34 @@
+﻿.book-row {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+.book-image {
+    width: 64px;
+    height: 90px;
+    object-fit: cover;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.fixed-col {
+    width: 72px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flex-col {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td, th {
+    padding: 0.5rem;
+}
