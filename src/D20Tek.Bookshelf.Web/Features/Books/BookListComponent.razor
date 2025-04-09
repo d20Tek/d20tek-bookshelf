@@ -3,7 +3,7 @@
 
 @if (_books is null)
 {
-    <div>Loading...</div>
+    <LoadingSpinner />
 }
 else if (_books.Any() is false)
 {
@@ -33,3 +33,5 @@ else
         </tbody>
     </table>
 }
+
+<DisplayErrors Errors=@_errors />

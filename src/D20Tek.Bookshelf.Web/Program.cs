@@ -14,5 +14,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<IBooksService, BooksService>();
+Constants.ServiceSleepDelay = builder.Configuration.GetValue<int>("TestSleepDelay", 0);
 
 await builder.Build().RunAsync();

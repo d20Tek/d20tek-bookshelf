@@ -3,9 +3,10 @@
 public partial class BookListComponent
 {
     private BookEntity[]? _books;
+    private Error[] _errors = [];
 
     protected override async Task OnInitializedAsync()
     {
-        _books = await _service.GetAll();
+        _books = await _service.GetAll().HandleErrorAsync(e => _errors = e, []);
     }
 }

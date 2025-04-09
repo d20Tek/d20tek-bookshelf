@@ -1,7 +1,4 @@
-﻿using D20Tek.Bookshelf.Web.Domain;
-using System.Net.Http.Json;
-
-namespace D20Tek.Bookshelf.Web.Features.Books;
+﻿namespace D20Tek.Bookshelf.Web.Features.Books;
 
 internal sealed class BooksService : IBooksService
 {
@@ -20,19 +17,19 @@ internal sealed class BooksService : IBooksService
         _logger = logger;
     }
 
-    public async Task<BookEntity[]> GetAll() => await GetCachedList();
+    public async Task<Result<BookEntity[]>> GetAll() => await GetCachedList();
 
     public async Task<Result<BookEntity>> GetById(string id)
     {
         var books = await GetCachedList();
-        return books.Where(x => x.Id == id)
-                    .Select(entity => (Result<BookEntity>)entity)
-                    .DefaultIfEmpty(NotFoundError<BookEntity>(id))
-                    .First();
+        return books.Bind(b => b.Where(x => x.Id == id)
+                                .Select(entity => (Result<BookEntity>)entity)
+                                .DefaultIfEmpty(NotFoundError<BookEntity>(id))
+                                .First());
     }
 
-    public async Task<BookEntity[]> GetCachedList() =>
-        _cachedBooks = _cachedBooks.Length <= 0 ?
-                            await _httpClient.GetFromJsonAsync<BookEntity[]>(_baseUrl) ?? [] :
-                            _cachedBooks;
+    public async Task<Result<BookEntity[]>> GetCachedList() =>
+        (_cachedBooks.Length <= 0) ?
+            await _httpClient.TryGetFromJsonAsync<BookEntity[]>(_baseUrl, [], _logger) :
+            _cachedBooks;
 }
