@@ -3,10 +3,16 @@
     "id": "TSR-2002",
     "title": "Dungeons & Dragons Boxed Set",
     "authors": [
-      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
-      { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
+      {
+        "name": "Gary Gygax",
+        "url": "https://en.wikipedia.org/wiki/Gary_Gygax"
+      },
+      {
+        "name": "Dave Arneson",
+        "url": "https://en.wikipedia.org/wiki/Dave_Arneson"
+      }
     ],
-    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets. Volume 1: Men & Magic, Volume 2: Monsters & Treasure, Volume 3: Underworld & Wilderness Adventures" ],
+    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets. Volume 1: Men & Magic, Volume 2: Monsters & Treasure, Volume 3: Underworld & Wilderness Adventures." ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -17,6 +23,26 @@
     },
     "altIds": {
       "tsrNum": "TSR-2002"
+    }
+  },
+  {
+    "id": "TSR-2003",
+    "title": "Supplement I: Greyhawk",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "Robert J. Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" }
+    ],
+    "description": [ "The first supplement for the original D&D game, Greyhawk focused primarily on rules and removed the game's dependence on the Chainmail rules. Despite the name, the Greyhawk supplement was not intended as a setting supplement, but rather featured rules used in Gary Gygax's Greyhawk campaign." ],
+    "details": {
+      "editionCode": "Oed",
+      "publisher": "Tactical Studies Rules",
+      "publishedOn": "1975",
+      "imageLink": "images/books/odnd-greyhawk.jpg",
+      "pages": 68,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2003"
     }
   }
 ]
