@@ -1,0 +1,34 @@
+﻿@page "/books/{Id}"
+@inject IBooksService _bookService;
+
+<PageTitle>Eldritch Library - Books</PageTitle>
+<h3>Book Details</h3>
+
+@if (_book.IsNone)
+{
+    <LoadingSpinner Label="Loading book..." />
+}
+@if (_book.IsSome && _book.Get() is BookEntity book)
+{
+    <div><b>Name:</b> @book.Title</div>
+    <hr />
+    <div><b>Description:</b></div>
+    @foreach(var d in book.Description)
+    {
+        <p>@d</p>
+    }
+}
+
+<DisplayErrors Errors=@_errors />
+
+@code {
+    private Error[] _errors = [];
+    private Option<BookEntity> _book = Option<BookEntity>.None();
+
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync() =>
+        await _bookService.GetById(Id)
+                          .HandleResultAsync(b => _book = b, e => _errors = e);
+}

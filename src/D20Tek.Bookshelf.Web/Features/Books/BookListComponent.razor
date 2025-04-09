@@ -1,4 +1,5 @@
-﻿@inject IBooksService _service;
+﻿@inject NavigationManager _nav;
+@inject IBooksService _service;
 <h3>Books</h3>
 
 @if (_books is null)
@@ -15,7 +16,7 @@ else
         <tbody>
         @foreach (var book in _books)
         {
-            <tr class="book-row">
+            <tr class="book-row" @onclick="@(() => NavigateToDetails(book.Id))">
                 <td class="bg-transparent fixed-col">
                     <img src="@book.Details.ImageLink"
                          alt="@book.Title"
