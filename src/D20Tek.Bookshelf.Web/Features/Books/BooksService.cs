@@ -2,11 +2,6 @@
 
 internal sealed class BooksService : IBooksService
 {
-    private const string _baseUrl = "data/books.json";
-
-    public static Failure<T> NotFoundError<T>(string id) where T : notnull =>
-        Error.NotFound("BookEntity.NotFound", $"Book with id={id} not found.");
-
     private readonly HttpClient _httpClient;
     private readonly ILogger<BooksService> _logger;
     private BookEntity[] _cachedBooks = [];
@@ -24,12 +19,22 @@ internal sealed class BooksService : IBooksService
         var books = await GetCachedList();
         return books.Bind(b => b.Where(x => x.Id == id)
                                 .Select(entity => (Result<BookEntity>)entity)
-                                .DefaultIfEmpty(NotFoundError<BookEntity>(id))
+                                .DefaultIfEmpty(Constants.Books.NotFoundError<BookEntity>(id))
                                 .First());
     }
 
-    public async Task<Result<BookEntity[]>> GetCachedList() =>
-        (_cachedBooks.Length <= 0) ?
-            await _httpClient.TryGetFromJsonAsync<BookEntity[]>(_baseUrl, [], _logger) :
-            _cachedBooks;
+    public async Task<Result<BookEntity[]>> GetCachedList()
+    {
+        if (_cachedBooks.Length <= 0)
+        {
+            var result = await _httpClient.TryGetFromJsonAsync<BookEntity[]>(Constants.Books.ServiceUrl, _logger);
+            if (result.IsSuccess) _cachedBooks = result.GetValue();
+
+            return result;
+        }
+        else
+        {
+            return _cachedBooks;
+        }
+    }
 }

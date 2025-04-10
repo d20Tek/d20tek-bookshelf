@@ -33,14 +33,13 @@ internal static partial class Constants
         public static string GetLabelClass(string label) => string.IsNullOrEmpty(label) ? "visually-hidden" : "ms-1";
     }
 
-    internal static class ContentLinks
+    internal static class Books
     {
-        public const string ServiceUrl = "/api/v1/content-links/home-sidebar";
+        public const string ServiceUrl = "data/books.json";
 
-        public const string SessionKey = "content-links-key";
+        public static string DetailsUrl(string id) => $"/books/{id}";
 
-        public const string ExpirationKey = "-expires";
-
-        public static TimeSpan CacheExpiration = TimeSpan.FromHours(4);
+        public static Failure<T> NotFoundError<T>(string id) where T : notnull =>
+            Error.NotFound("BookEntity.NotFound", $"Book with id={id} not found.");
     }
 }

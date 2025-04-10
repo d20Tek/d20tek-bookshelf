@@ -10,5 +10,5 @@ public partial class BookListComponent
         _books = await _service.GetAll().HandleErrorAsync(e => _errors = e, []);
     }
 
-    private void NavigateToDetails(string id) => _nav.NavigateTo($"/books/{id}");
+    private void NavigateToDetails(string id) => _nav.NavigateTo(Constants.Books.DetailsUrl(id));
 }
