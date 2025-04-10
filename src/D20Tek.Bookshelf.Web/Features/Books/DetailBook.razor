@@ -19,8 +19,8 @@
                      alt="@book.Title" />
             </div>
 
-            <div class="flex-grow-1">
-                <div class="card-body">
+            <div class="flex-grow-1 pt-0">
+                <div class="card-body py-0">
                     <div class="card-text"><strong>Author(s): </strong><AuthorsComponent Authors=book.Authors /></div>
                     <div class="card-text">
                         <small class="text-muted"><strong>Edition:</strong> @book.Details.Edition.Name</small>
@@ -30,6 +30,7 @@
                     <div class="card-text"><strong>Pages:</strong> @book.Details.Pages</div>
                     <div class="card-text"><strong>Media Type:</strong> @book.Details.MediaType</div>
                     <BookIdentifiersComponent Identifiers=@book.AltIds />
+                    <BookLinksButtons Links=@book.Links />
                 </div>
             </div>
         </div>

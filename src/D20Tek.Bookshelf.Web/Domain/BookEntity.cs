@@ -14,13 +14,16 @@ internal sealed class BookEntity
 
     public BookIdentifiers AltIds { get; }
 
+    public BookLink[] Links { get; }
+
     public BookEntity(
         string id,
         string title,
         Author[] authors,
         string[] description,
         BookDetails details,
-        BookIdentifiers altIds)
+        BookIdentifiers altIds,
+        BookLink[] links)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(id, nameof(id));
         ArgumentNullException.ThrowIfNullOrEmpty(title, nameof(title));
@@ -31,5 +34,6 @@ internal sealed class BookEntity
         Description = description;
         Details = details;
         AltIds = altIds;
+        Links = links;
     }
 }

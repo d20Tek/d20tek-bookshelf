@@ -17,7 +17,12 @@
     },
     "altIds": {
       "tsrNum": "TSR-2002"
-    }
+    },
+    "links": [
+      { "source": 0, "url": "https://amazon.com" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+Original+D%26D+White+Box+Set" },
+      { "source": 2, "url": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_(1974)" }
+    ]
   },
   {
     "id": "TSR-2003",

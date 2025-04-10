@@ -1,0 +1,30 @@
+﻿@if (Links?.Any() == true)
+{
+    <div class="me-2 mt-1">
+        @foreach (var link in Links)
+        {
+            <a href="@link.Url"
+               target="_blank"
+               class="btn btn-outline-light btn-sm me-2"
+               title="@link.Source">
+                @switch (link.Source)
+                {
+                    case BookLink.Type.Amazon:
+                        <i class="bi bi-amazon"></i>
+                        break;
+                    case BookLink.Type.Ebay:
+                        <i class="bi bi-bag-fill"></i>
+                        break;
+                    case BookLink.Type.Wikipedia:
+                        <i class="bi bi-info-circle-fill"></i>
+                        break;
+                }
+            </a>
+        }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public BookLink[] Links { get; set; } = [];
+}
