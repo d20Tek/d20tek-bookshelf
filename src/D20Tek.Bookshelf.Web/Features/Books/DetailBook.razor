@@ -2,7 +2,7 @@
 @inject IBooksService _bookService;
 
 <PageTitle>Eldritch Library - Books</PageTitle>
-<h3>Book Details</h3>
+<h3>Tome Details</h3>
 
 @if (_book.IsNone)
 {
@@ -10,12 +10,33 @@
 }
 @if (_book.IsSome && _book.Get() is BookEntity book)
 {
-    <div><b>Name:</b> @book.Title</div>
-    <hr />
+    <div class="card text-white bg-dark p-2 mb-3">
+        <h4 class="card-title">@book.Title</h4>
+
+        <div class="d-flex flex-column-reverse flex-md-row g-0">
+            <div class="flex-shrink-0 text-center p-0 book-image-container">
+                <img src="@book.Details.ImageLink" class="img-fluid rounded" alt="@book.Title" />
+            </div>
+
+            <div class="flex-grow-1">
+                <div class="card-body">
+                    <div class="card-text"><strong>Author(s): </strong><AuthorsComponent Authors=book.Authors /></div>
+                    <div class="card-text"><small class="text-muted">
+                        <strong>Edition:</strong> @book.Details.Edition.Name
+                    </small></div>
+                    <div class="card-text"><strong>Publisher:</strong> @book.Details.Publisher</div>
+                    <div class="card-text"><strong>Published:</strong> @book.Details.PublishedOn</div>
+                    <div class="card-text"><strong>Pages:</strong> @book.Details.Pages</div>
+                    <div class="card-text"><strong>Media Type:</strong> @book.Details.MediaType</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div><b>Description:</b></div>
     @foreach(var d in book.Description)
     {
-        <p>@d</p>
+        <p class="text-muted">@d</p>
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace D20Tek.Bookshelf.Web.Domain;
 
-internal sealed class BookIdentifiers
+public sealed class BookIdentifiers
 {
     public string Ibsn { get; }
 

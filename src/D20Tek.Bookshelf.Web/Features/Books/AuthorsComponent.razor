@@ -1,0 +1,14 @@
+﻿@for (int i = 0; i < Authors.Count(); i++)
+{
+    var author = Authors[i];
+    <a class="text-nowrap" href="@author.Url" target="_authors">@author.Name</a>
+    @if (i < Authors.Count() - 1)
+    {
+        <text>, </text>
+    }
+}
+
+@code {
+    [Parameter]
+    public Author[] Authors { get; set; } = [];
+}

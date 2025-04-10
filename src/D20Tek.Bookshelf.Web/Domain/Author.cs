@@ -1,6 +1,6 @@
 ﻿namespace D20Tek.Bookshelf.Web.Domain;
 
-internal sealed class Author
+public sealed class Author
 {
     public string Name { get; init; }
 
