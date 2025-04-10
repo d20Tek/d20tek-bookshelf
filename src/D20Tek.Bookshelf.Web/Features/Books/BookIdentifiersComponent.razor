@@ -1,0 +1,17 @@
+﻿@if (string.IsNullOrEmpty(Identifiers.Ibsn) is false)
+{
+<div class="card-text"><strong>IBSN:</strong> @Identifiers.Ibsn</div>
+}
+@if (string.IsNullOrEmpty(Identifiers.TsrNum) is false)
+{
+    <div class="card-text"><strong>TSR #:</strong> @Identifiers.TsrNum</div>
+}
+@if (string.IsNullOrEmpty(Identifiers.AltId) is false)
+{
+    <div class="card-text"><strong>Item #:</strong> @Identifiers.AltId</div>
+}
+
+@code {
+    [Parameter]
+    public BookIdentifiers Identifiers { get; set; } = BookIdentifiers.Empty;
+}

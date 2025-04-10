@@ -21,13 +21,14 @@
             <div class="flex-grow-1">
                 <div class="card-body">
                     <div class="card-text"><strong>Author(s): </strong><AuthorsComponent Authors=book.Authors /></div>
-                    <div class="card-text"><small class="text-muted">
-                        <strong>Edition:</strong> @book.Details.Edition.Name
-                    </small></div>
+                    <div class="card-text">
+                        <small class="text-muted"><strong>Edition:</strong> @book.Details.Edition.Name</small>
+                    </div>
                     <div class="card-text"><strong>Publisher:</strong> @book.Details.Publisher</div>
                     <div class="card-text"><strong>Published:</strong> @book.Details.PublishedOn</div>
                     <div class="card-text"><strong>Pages:</strong> @book.Details.Pages</div>
                     <div class="card-text"><strong>Media Type:</strong> @book.Details.MediaType</div>
+                    <BookIdentifiersComponent Identifiers=@book.AltIds />
                 </div>
             </div>
         </div>
@@ -41,15 +42,3 @@
 }
 
 <DisplayErrors Errors=@_errors />
-
-@code {
-    private Error[] _errors = [];
-    private Option<BookEntity> _book = Option<BookEntity>.None();
-
-    [Parameter]
-    public string Id { get; set; } = string.Empty;
-
-    protected override async Task OnInitializedAsync() =>
-        await _bookService.GetById(Id)
-                          .HandleResultAsync(b => _book = b, e => _errors = e);
-}

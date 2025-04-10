@@ -14,4 +14,6 @@ public sealed class BookIdentifiers
         TsrNum = tsrNum;
         AltId = altId;
     }
+
+    public static BookIdentifiers Empty = new(string.Empty, string.Empty, string.Empty);
 }
