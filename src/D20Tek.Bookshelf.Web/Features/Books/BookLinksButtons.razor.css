@@ -7,6 +7,15 @@
     background-repeat: no-repeat;
 }
 
+.bi-drive-thru {
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/icons/drive-thru-logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .logo-image {
     width: 14px;
     height: 16px;

@@ -4,7 +4,7 @@
         @foreach (var link in Links)
         {
             <a href="@link.Url"
-               target="_blank"
+               target="_bookLink"
                class="btn btn-outline-light btn-sm me-2"
                title="@link.Source">
                 @switch (link.Source)
@@ -13,10 +13,13 @@
                         <i class="bi bi-amazon" style="color: #ff9900;"></i>
                         break;
                     case BookLink.Type.Ebay:
-                        <img src="/images/icons/ebay-logo.png" class="logo-image" />
+                        <img class="logo-image" src="/images/icons/ebay-logo.png" />
                         break;
                     case BookLink.Type.Wikipedia:
                         <i class="bi bi-wikipedia"></i>
+                        break;
+                    case BookLink.Type.DriveThruRPG:
+                        <img class="logo-image" src="/images/icons/drive-thru-logo.png" />
                         break;
                 }
             </a>

@@ -6,7 +6,8 @@ public class BookLink
     {
         Amazon,
         Ebay,
-        Wikipedia
+        DriveThruRPG,
+        Wikipedia,
     }
 
     public Type Source { get; }
