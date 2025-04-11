@@ -20,4 +20,12 @@ public class BookLink
         Source = source;
         Url = url;
     }
+
+    public string GetFullUrl() =>
+        Source switch
+        {
+            BookLink.Type.Ebay => Url + Constants.Books.AffiliateSuffixEbay,
+            BookLink.Type.DriveThruRPG => Url + Constants.Books.AffiliateSuffixDriveThruRpg,
+            _ => Url
+        };
 }

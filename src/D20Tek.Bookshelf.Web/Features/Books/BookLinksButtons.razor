@@ -3,10 +3,10 @@
     <div class="me-2 mt-1">
         @foreach (var link in Links)
         {
-            <a href="@link.Url"
-               target="_bookLink"
-               class="btn btn-outline-light btn-sm me-2"
-               title="@link.Source">
+            <a href="@link.GetFullUrl()"
+            target="_bookLink"
+            class="btn btn-outline-light btn-sm me-2"
+            title="@link.Source">
                 @switch (link.Source)
                 {
                     case BookLink.Type.Amazon:

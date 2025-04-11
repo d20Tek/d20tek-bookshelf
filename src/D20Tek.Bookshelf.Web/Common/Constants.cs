@@ -32,14 +32,4 @@ internal static partial class Constants
 
         public static string GetLabelClass(string label) => string.IsNullOrEmpty(label) ? "visually-hidden" : "ms-1";
     }
-
-    internal static class Books
-    {
-        public const string ServiceUrl = "data/books.json";
-
-        public static string DetailsUrl(string id) => $"/books/{id}";
-
-        public static Failure<T> NotFoundError<T>(string id) where T : notnull =>
-            Error.NotFound("BookEntity.NotFound", $"Book with id={id} not found.");
-    }
 }
