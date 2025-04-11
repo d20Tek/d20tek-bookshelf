@@ -1,0 +1,39 @@
+﻿@page "/info/about"
+<PageTitle>Eldritch Library - About</PageTitle>
+
+<div class="container mt-3 text-center">
+    <div class="card shadow-sm p-2 p-md-4 mx-auto" style="max-width: 600px;">
+        <div class="d-flex align-items-center mb-3">
+            <img src="/icon-512.png" alt="Eldritch Library Logo" class="img-fluid me-3" style="max-width: 140px;" />
+
+            <div>
+                <h1 class="fw-bold mb-1">Eldritch Library</h1>
+                <p class="text-muted mb-0">Version: 1.0.250411</p>
+            </div>
+        </div>
+
+        <p class="lead">
+            Eldritch Library is a simple yet powerful application that helps find all rulebooks from various
+            Dungeons & Dragons editions. You can also track your own collection of these books to help you fill
+            out your own library.
+        </p>
+
+        <p class="small text-secondary">
+            &copy; @DateTime.Now.Year Eldritch Library. All rights reserved.
+        </p>
+
+        <hr />
+        <p class="small">
+            While these tools are currently free to use, we do accept donations if you find them personally helpful.
+            Donations will go towards running the apps and services on better hardware infrastructure to provide all
+            users with a faster experience.
+        </p>
+        <div class="text-center"><DonateButton /></div>
+
+        <hr />
+        <p class="small">
+            External book links in Eldritch Library use affiliate links on Amazon, EBay, and DriveThruRPG as a 
+            secondary income stream to get some payments based on book purchases made by our users.
+        </p>
+    </div>
+</div>
