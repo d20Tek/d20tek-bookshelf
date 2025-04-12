@@ -2,7 +2,7 @@
 
 public partial class BookListComponent
 {
-    private BookEntity[]? _books;
+    private IEnumerable<BookEntity>? _books;
     private Error[] _errors = [];
 
     protected override async Task OnInitializedAsync()

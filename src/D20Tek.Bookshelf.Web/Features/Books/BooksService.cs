@@ -4,7 +4,7 @@ internal sealed class BooksService : IBooksService
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<BooksService> _logger;
-    private BookEntity[] _cachedBooks = [];
+    private IEnumerable<BookEntity> _cachedBooks = [];
 
     public BooksService(HttpClient httpClient, ILogger<BooksService> logger)
     {
@@ -12,7 +12,7 @@ internal sealed class BooksService : IBooksService
         _logger = logger;
     }
 
-    public async Task<Result<BookEntity[]>> GetAll() => await GetCachedList();
+    public async Task<Result<IEnumerable<BookEntity>>> GetAll() => await GetCachedList();
 
     public async Task<Result<BookEntity>> GetById(string id)
     {
@@ -23,18 +23,24 @@ internal sealed class BooksService : IBooksService
                                 .First());
     }
 
-    public async Task<Result<BookEntity[]>> GetCachedList()
+    public async Task<Result<IEnumerable<BookEntity>>> GetByQuery(BookQuery query)
     {
-        if (_cachedBooks.Length <= 0)
+        var books = await GetCachedList();
+        return books.Map(b => b.ApplyFilters(query));
+    }
+
+    private async Task<Result<IEnumerable<BookEntity>>> GetCachedList()
+    {
+        if (_cachedBooks.Count() <= 0)
         {
-            var result = await _httpClient.TryGetFromJsonAsync<BookEntity[]>(Constants.Books.ServiceUrl, _logger);
+            var result = await _httpClient.TryGetFromJsonAsync<IEnumerable<BookEntity>>(Constants.Books.ServiceUrl, _logger);
             if (result.IsSuccess) _cachedBooks = result.GetValue();
 
             return result;
         }
         else
         {
-            return _cachedBooks;
+            return Result<IEnumerable<BookEntity>>.Success(_cachedBooks);
         }
     }
 }
