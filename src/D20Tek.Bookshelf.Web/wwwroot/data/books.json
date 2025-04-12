@@ -6,7 +6,10 @@
       { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
       { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
     ],
-    "description": [ "The original Dungeons & Dragons was published as a boxed set containing three separate booklets. Volume 1: Men & Magic, Volume 2: Monsters & Treasure, Volume 3: Underworld & Wilderness Adventures." ],
+    "description": [
+      "The original Dungeons & Dragons boxed set, published in 1974 by Tactical Studies Rules, introduced the world to an entirely new genre of gaming: the tabletop role-playing game. Created by Gary Gygax and Dave Arneson, it combined medieval fantasy, improvisational storytelling, and tactical wargaming into a groundbreaking system that encouraged collaborative adventure.",
+      "With just three small booklets, it opened the gates to a limitless world of imagination and heroic quests. This humble beginning laid the foundation for what would become a global phenomenon and an enduring legacy in gaming history."
+    ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -32,7 +35,7 @@
       { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
       { "name": "Robert J. Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" }
     ],
-    "description": [ "The first supplement for the original D&D game, Greyhawk focused primarily on rules and removed the game's dependence on the Chainmail rules. Despite the name, the Greyhawk supplement was not intended as a setting supplement, but rather featured rules used in Gary Gygax's Greyhawk campaign." ],
+    "description": [ "Greyhawk, released in 1975, was the first official expansion to the original D&D ruleset. Co-authored by Gary Gygax and Rob Kuntz, this supplement introduced a host of innovations that would become foundational to the game, including new character classes like the thief and paladin, expanded combat rules, and a trove of additional monsters, spells, and magical items. Drawing from the legendary Greyhawk campaign, it infused the game with greater depth and variety, offering Dungeon Masters and players new dimensions of adventure. Greyhawk marked a pivotal step in the evolution of D&D, shaping its identity for years to come." ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -56,7 +59,7 @@
     "authors": [
       { "name": "Dave Arneson", "url": "https://en.wikipedia.org/wiki/Dave_Arneson" }
     ],
-    "description": [ "The second supplement for the original D&D game, Blackmoor added rules, monsters, treasure and is notable for containing the first published adventure for a role-playing game - \"Temple of the Frog\". Like Greyhawk, its focus was more on rules than setting material, despite the name." ],
+    "description": [ "Blackmoor, released in 1975, expanded the original game's horizons with new rules, character classes, and the first published role-playing game adventure. Compiled by Dave Arneson, co-creator of D&D, it introduced the monk and assassin classes, underwater adventuring rules, and innovative gameplay elements that pushed the boundaries of fantasy role-playing. Blackmoor also featured the first detailed campaign setting, offering players a glimpse into Arneson's own legendary home campaign. This supplement marked a crucial step in evolving D&D into a richer, more immersive experience." ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -81,7 +84,7 @@
       { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
       { "name": "Brian Blume", "url": "https://en.wikipedia.org/wiki/Brian_Blume" }
     ],
-    "description": [ "Eldritch Wizardry was the third supplement for the original D&D game and is most notable for introducing some of its most famous monsters, such as demons and mind flayers." ],
+    "description": [ "Eldritch Wizardry, published in 1976, delved deep into the arcane and esoteric corners of fantasy role-playing. It introduced psionics, artifacts, and demons to the game, significantly expanding the magical and supernatural elements available to players. The supplement unveiled powerful new spells, the druid class, and infamous artifacts like the Hand and Eye of Vecna, adding layers of mystery and danger to campaigns. Eldritch Wizardry pushed the boundaries of imagination and complexity, cementing D&D's reputation as a game of limitless adventure." ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -106,7 +109,10 @@
       { "name": "Robert J. Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" },
       { "name": "James M. Ward", "url": "https://en.wikipedia.org/wiki/James_M._Ward" }
     ],
-    "description": [ "Gods, Demi-Gods & Heroes was the fourth supplement for the original D&D game and adapted a variety of real-world and fictional pantheons for use in the D&D game." ],
+    "description": [
+      "Gods, Demigods & Heroes, released in 1976, brought myth and legend into the hands of adventurers. This supplement presented detailed pantheons from real-world mythologies—Greek, Norse, Egyptian, and more—alongside fantasy deities from popular fiction. Designed as a powerful tool for Dungeon Masters, it provided stats, lore, and abilities for divine beings, allowing them to shape their worlds with godlike influence.",
+      "Supplement IV served as both a reference and inspiration, blurring the line between mythology and fantasy in early D&D campaigns."
+    ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -130,7 +136,10 @@
     "authors": [
       { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
     ],
-    "description": [ "The fifth and final supplement for the original D&D game focused on providing a new diceless set of rules for large battles between armies." ],
+    "description": [
+      "Swords & Spells, published in 1976, introduced a set of mass combat rules tailored for large-scale fantasy battles. Designed as a bridge between D&D and its wargaming roots, this supplement allowed players to command entire armies while retaining the flavor of individual character actions. It translated spells and creatures into miniature warfare mechanics, offering a new dimension of tactical gameplay.",
+      "Swords & Spells was the final official supplement for the original D&D line, rounding out the game's formative era with epic, battlefield-level scope."
+    ],
     "details": {
       "editionCode": "Oed",
       "publisher": "Tactical Studies Rules",
@@ -146,6 +155,57 @@
       { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+Original+D%26D+Swords+Spells" },
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17175/swords-spells-0e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Swords_%26_Spells" }
+    ]
+  },
+  {
+    "id": "TSR-2010",
+    "title": "Player's Handbook'",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "Mike Carr", "url": "https://en.wikipedia.org/wiki/Mike_Carr_(game_designer)" }
+    ],
+    "description": [ "The first Player's Handbook was released in June 1978 as a 128-page hardcover. It was written by Gary Gygax and edited by Mike Carr, who also wrote the foreword. The original cover art was by D.A. Trampier, who also provided interior illustrations along with David C. Sutherland III." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "June 1978",
+      "imageLink": "images/books/1ed-players-handbook.jpg",
+      "pages": 128,
+      "mediaType": "Rulebook"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2010",
+      "isbn": "0-935696-01-6"
+    },
+    "links": [
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Players+Handbook" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17003/players-handbook-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Player%27s_Handbook#Advanced_Dungeons_&_Dragons" }
+    ]
+  },
+  {
+    "id": "TSR-2011",
+    "title": "Dungeon Master's Guide",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
+    ],
+    "description": [ "The original AD&D Dungeon Master's Guide was published by TSR in 1979. It was written by Gary Gygax and published as a 232-page hardcover with a cover by David C. Sutherland III. The book was intended to provide Dungeon Masters all the information and rules necessary to run a campaign for the D&D game. The 1983 printing featured a new cover by Jeff Easley." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "May 1979",
+      "imageLink": "images/books/1ed-dungeon-masters-guide.jpg",
+      "pages": 232,
+      "mediaType": "Rulebook"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2011",
+      "isbn": "0-88038-084-5"
+    },
+    "links": [
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Dungeon+Masters+Guide" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17004/dungeon-master-s-guide-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Dungeon_Master%27s_Guide#Advanced_Dungeons_&_Dragons" }
     ]
   }
 ]
