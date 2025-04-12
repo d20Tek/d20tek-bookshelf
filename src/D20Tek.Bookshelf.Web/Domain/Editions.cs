@@ -13,5 +13,7 @@ internal sealed class Editions
         new("5ed2024", "Dungeons & Dragons 2024", "DnD2024", 2024, DateTime.Now.Year)
     ];
 
+    public static DndEdition[] GetEditions() => _editions;
+
     public static DndEdition GetEdition(string code) => _editions.First(x => x.Code == code);
 }

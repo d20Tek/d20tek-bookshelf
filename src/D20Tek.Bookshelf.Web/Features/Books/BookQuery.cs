@@ -1,6 +1,6 @@
 ﻿namespace D20Tek.Bookshelf.Web.Features.Books;
 
-internal class BookQuery
+public class BookQuery
 {
     public Option<string> Author { get; } = Option<string>.None();
 

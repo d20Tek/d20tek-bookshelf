@@ -2,6 +2,16 @@
 
 public partial class BookListComponent
 {
+    public class FilterViewModel
+    {
+        public string Author { get; set; } = string.Empty;
+
+        public string EditionCode { get; set; } = string.Empty;
+
+        public string MediaType { get; set; } = string.Empty;
+    }
+
+    private FilterViewModel _vmFilter = new();
     private IEnumerable<BookEntity>? _books;
     private Error[] _errors = [];
 
@@ -11,4 +21,6 @@ public partial class BookListComponent
     }
 
     private void NavigateToDetails(string id) => _nav.NavigateTo(Constants.Books.DetailsUrl(id));
+
+    private void SearchBooks() { }
 }

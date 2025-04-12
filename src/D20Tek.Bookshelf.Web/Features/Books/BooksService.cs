@@ -29,6 +29,30 @@ internal sealed class BooksService : IBooksService
         return books.Map(b => b.ApplyFilters(query));
     }
 
+    // todo: change these to get calculated and cached when the books are loaded.
+    public async Task<string[]> GetAuthors()
+    {
+        var books = await GetCachedList();
+        return books.Match(
+            b => b.SelectMany(b => b.Authors)
+                  .Select(a => a.Name)
+                  .Distinct()
+                  .OrderBy(a => a)
+                  .ToArray(),
+            e => []);
+    }
+
+    public async Task<string[]> GetMediaTypes()
+    {
+        var books = await GetCachedList();
+        return books.Match(
+            b => b.Select(b => b.Details.MediaType)
+                  .Distinct()
+                  .OrderBy(m => m)
+                  .ToArray(),
+            e => []);
+    }
+
     private async Task<Result<IEnumerable<BookEntity>>> GetCachedList()
     {
         if (_cachedBooks.Count() <= 0)
