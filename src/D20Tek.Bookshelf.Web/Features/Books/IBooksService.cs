@@ -8,7 +8,7 @@ internal interface IBooksService
 
     public Task<Result<IEnumerable<BookEntity>>> GetByQuery(BookQuery query);
 
-    public Task<string[]> GetAuthors();
+    public IEnumerable<string> GetAuthors();
 
-    public Task<string[]> GetMediaTypes();
+    public IEnumerable<string> GetMediaTypes();
 }

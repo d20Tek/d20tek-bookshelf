@@ -6,16 +6,16 @@ public partial class BookListFilters
     public string _editionCode = string.Empty;
     public string _mediaType = string.Empty;
     private bool isExpanded = false;
-    private string[] _authors = [];
-    private string[] _mediatypes = [];
+    private IEnumerable<string> _authors = [];
+    private IEnumerable<string> _mediatypes = [];
 
     [Parameter]
     public EventCallback<BookQuery> SearchClicked { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        _authors = await _bookService.GetAuthors();
-        _mediatypes = await _bookService.GetMediaTypes();
+        _authors = _bookService.GetAuthors();
+        _mediatypes = _bookService.GetMediaTypes();
     }
 
     private void ToggleExpanded() => isExpanded = !isExpanded;

@@ -5,6 +5,8 @@ internal sealed class BooksService : IBooksService
     private readonly HttpClient _httpClient;
     private readonly ILogger<BooksService> _logger;
     private IEnumerable<BookEntity> _cachedBooks = [];
+    private IEnumerable<string> _cachedAuthors = [];
+    private IEnumerable<string> _cachedMediaTypes = [];
 
     public BooksService(HttpClient httpClient, ILogger<BooksService> logger)
     {
@@ -29,36 +31,16 @@ internal sealed class BooksService : IBooksService
         return books.Map(b => b.ApplyFilters(query));
     }
 
-    // todo: change these to get calculated and cached when the books are loaded.
-    public async Task<string[]> GetAuthors()
-    {
-        var books = await GetCachedList();
-        return books.Match(
-            b => b.SelectMany(b => b.Authors)
-                  .Select(a => a.Name)
-                  .Distinct()
-                  .OrderBy(a => a)
-                  .ToArray(),
-            e => []);
-    }
+    public IEnumerable<string> GetAuthors() => _cachedAuthors;
 
-    public async Task<string[]> GetMediaTypes()
-    {
-        var books = await GetCachedList();
-        return books.Match(
-            b => b.Select(b => b.Details.MediaType)
-                  .Distinct()
-                  .OrderBy(m => m)
-                  .ToArray(),
-            e => []);
-    }
+    public IEnumerable<string> GetMediaTypes() => _cachedMediaTypes;
 
     private async Task<Result<IEnumerable<BookEntity>>> GetCachedList()
     {
         if (_cachedBooks.Count() <= 0)
         {
             var result = await _httpClient.TryGetFromJsonAsync<IEnumerable<BookEntity>>(Constants.Books.ServiceUrl, _logger);
-            if (result.IsSuccess) _cachedBooks = result.GetValue();
+            if (result.IsSuccess) CacheEntities(result.GetValue());
 
             return result;
         }
@@ -66,5 +48,17 @@ internal sealed class BooksService : IBooksService
         {
             return Result<IEnumerable<BookEntity>>.Success(_cachedBooks);
         }
+    }
+
+    private void CacheEntities(IEnumerable<BookEntity> books)
+    {
+        _cachedBooks = books;
+        _cachedMediaTypes = books.Select(b => b.Details.MediaType)
+                              .Distinct()
+                              .OrderBy(m => m);
+        _cachedAuthors = books.SelectMany(b => b.Authors)
+                              .Select(a => a.Name)
+                              .Distinct()
+                              .OrderBy(a => a);
     }
 }

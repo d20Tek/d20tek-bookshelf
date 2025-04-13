@@ -12,7 +12,7 @@ aria-expanded="true" aria-controls="filterForm"
         <div class="col-12 col-md-3 mb-2">
             <label for="filterAuthor" class="form-label">Author</label>
             <InputSelect id="filterAuthor" class="form-control" required @bind-Value="_author">
-                <option selected value="">Select author...</option>
+                <option class="text-muted" selected value="">All authors</option>
                 @foreach (var author in _authors)
                 {
                     <option value="@author">@author</option>
@@ -22,7 +22,7 @@ aria-expanded="true" aria-controls="filterForm"
         <div class="col-12 col-md-3 mb-2">
             <label for="filterEdition" class="form-label">Edition</label>
             <InputSelect id="filterEdition" class="form-control" required @bind-Value="_editionCode">
-                <option selected value="">Select edition...</option>
+                <option class="text-muted" selected value="">All editions</option>
                 @foreach(var ed in Editions.GetEditions())
                 {
                     <option value="@ed.Code">@ed.Name</option>
@@ -32,7 +32,7 @@ aria-expanded="true" aria-controls="filterForm"
         <div class="col-12 col-md-3 mb-2">
             <label for="filterMediaType" class="form-label">Media type</label>
             <InputSelect id="filterMediaType" class="form-control" required @bind-Value="_mediaType">
-                <option selected value="">Select media type...</option>
+                <option class="text-muted" selected value="">All media types</option>
                 @foreach (var mt in _mediatypes)
                 {
                     <option value="@mt">@mt</option>
