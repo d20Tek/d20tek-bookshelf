@@ -158,8 +158,34 @@
     ]
   },
   {
+    "id": "TSR-2009",
+    "title": "Monster Manual",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
+    ],
+    "description": [ "The Advanced Dungeons & Dragons First Edition Monster Manual, published in 1977, was the very first hardcover rulebook for AD&D and marked a significant evolution in tabletop role-playing. Compiled and written by Gary Gygax, it introduced a comprehensive bestiary of over 350 creatures, ranging from classic mythological beasts to wholly original fantasy monsters. The book set the standard for monster presentation in future editions, with detailed statistics, descriptions, and evocative illustrations. It became an essential tool for Dungeon Masters, laying the foundation for decades of storytelling and adventure in the D&D multiverse." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Dec 1977",
+      "imageLink": "images/books/1ed-monster-manual.jpg",
+      "pages": 108,
+      "mediaType": "Rulebook"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2009",
+      "isbn": "0-935696-00-8"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/42HGA9D" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Monster+Manual" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17002/monster-manual-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Monster_Manual#Original_Monster_Manual" }
+    ]
+  },
+  {
     "id": "TSR-2010",
-    "title": "Player's Handbook'",
+    "title": "Player's Handbook",
     "authors": [
       { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
       { "name": "Mike Carr", "url": "https://en.wikipedia.org/wiki/Mike_Carr_(game_designer)" }
@@ -178,6 +204,7 @@
       "isbn": "0-935696-01-6"
     },
     "links": [
+      { "source": 0, "url": "https://amzn.to/https://amzn.to/4jiitUX" },
       { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Players+Handbook" },
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17003/players-handbook-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Player%27s_Handbook#Advanced_Dungeons_&_Dragons" }
@@ -200,9 +227,10 @@
     },
     "altIds": {
       "tsrNum": "TSR-2011",
-      "isbn": "0-88038-084-5"
+      "isbn": "0-935696-02-4"
     },
     "links": [
+      { "source": 0, "url": "https://amzn.to/https://amzn.to/https://amzn.to/3G3SwcY" },
       { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Dungeon+Masters+Guide" },
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17004/dungeon-master-s-guide-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Dungeon_Master%27s_Guide#Advanced_Dungeons_&_Dragons" }
