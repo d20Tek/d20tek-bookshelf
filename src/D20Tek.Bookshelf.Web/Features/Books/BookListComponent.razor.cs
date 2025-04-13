@@ -2,25 +2,16 @@
 
 public partial class BookListComponent
 {
-    public class FilterViewModel
-    {
-        public string Author { get; set; } = string.Empty;
-
-        public string EditionCode { get; set; } = string.Empty;
-
-        public string MediaType { get; set; } = string.Empty;
-    }
-
-    private FilterViewModel _vmFilter = new();
     private IEnumerable<BookEntity>? _books;
     private Error[] _errors = [];
 
-    protected override async Task OnInitializedAsync()
-    {
-        _books = await _service.GetAll().HandleErrorAsync(e => _errors = e, []);
-    }
+    protected override async Task OnInitializedAsync() => await SearchBooks(BookQuery.Empty);
 
     private void NavigateToDetails(string id) => _nav.NavigateTo(Constants.Books.DetailsUrl(id));
 
-    private void SearchBooks() { }
+    private async Task SearchBooks(BookQuery query)
+    {
+        _books = await _service.GetByQuery(query)
+                               .HandleErrorAsync(e => _errors = e, []);
+    }
 }

@@ -12,15 +12,20 @@ public class BookQuery
 
     public int Skip { get; }
 
-    public BookQuery(string author, string editionCode, string mediaType, int take, int skip)
+    public BookQuery(
+        string author,
+        string editionCode,
+        string mediaType,
+        int skip = 0,
+        int take = Constants.Books.DefaultPageSize)
     {
         Author = ConvertString(author);
         EditionCode = ConvertString(editionCode);
         MediaType = ConvertString(mediaType);
         Take = take;
         Skip = skip;
-
     }
+    public static BookQuery Empty => new(string.Empty, string.Empty, string.Empty);
 
     private static Option<string> ConvertString(string value) =>
         string.IsNullOrEmpty(value) ? Option<string>.None() : value;

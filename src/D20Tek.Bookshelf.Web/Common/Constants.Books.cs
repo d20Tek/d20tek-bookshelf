@@ -8,6 +8,8 @@ internal static partial class Constants
 
         public static string DetailsUrl(string id) => $"/books/{id}";
 
+        public const int DefaultPageSize = 25;
+
         public static Failure<T> NotFoundError<T>(string id) where T : notnull =>
             Error.NotFound("BookEntity.NotFound", $"Book with id={id} not found.");
 
