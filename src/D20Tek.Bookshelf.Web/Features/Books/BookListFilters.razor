@@ -11,8 +11,8 @@ aria-expanded="true" aria-controls="filterForm"
     <EditForm class="row mx-1 border" Model="@this">
         <div class="col-12 col-md-3 mb-2">
             <label for="filterAuthor" class="form-label">Author</label>
-            <InputSelect id="filterAuthor" class="form-control" required @bind-Value="author">
-                <option selected value=null>Select author...</option>
+            <InputSelect id="filterAuthor" class="form-control" required @bind-Value="_author">
+                <option selected value="">Select author...</option>
                 @foreach (var author in _authors)
                 {
                     <option value="@author">@author</option>
@@ -21,8 +21,8 @@ aria-expanded="true" aria-controls="filterForm"
         </div>
         <div class="col-12 col-md-3 mb-2">
             <label for="filterEdition" class="form-label">Edition</label>
-            <InputSelect id="filterEdition" class="form-control" required @bind-Value="editionCode">
-                <option selected value=null>Select edition...</option>
+            <InputSelect id="filterEdition" class="form-control" required @bind-Value="_editionCode">
+                <option selected value="">Select edition...</option>
                 @foreach(var ed in Editions.GetEditions())
                 {
                     <option value="@ed.Code">@ed.Name</option>
@@ -31,8 +31,8 @@ aria-expanded="true" aria-controls="filterForm"
         </div>
         <div class="col-12 col-md-3 mb-2">
             <label for="filterMediaType" class="form-label">Media type</label>
-            <InputSelect id="filterMediaType" class="form-control" required @bind-Value="mediaType">
-                <option selected value=null>Select media type...</option>
+            <InputSelect id="filterMediaType" class="form-control" required @bind-Value="_mediaType">
+                <option selected value="">Select media type...</option>
                 @foreach (var mt in _mediatypes)
                 {
                     <option value="@mt">@mt</option>
@@ -40,36 +40,8 @@ aria-expanded="true" aria-controls="filterForm"
             </InputSelect>
         </div>
         <div class="col-12 col-md-3 d-flex align-items-end mb-2">
-            <LoadingSubmitButton Label="Search" OnValidSubmit="SearchBooks" />
+            <LoadingSubmitButton IconClass="bi bi-search" Label="Search" OnValidSubmit="Search" />
+            <button class="btn btn-secondary ms-2" @onclick=ResetFilters>Reset</button>
         </div>
     </EditForm>
 </div>
-
-@code {
-    public string? author;
-    public string? editionCode;
-    public string? mediaType;
-    private bool isExpanded = false;
-    private string[] _authors = [];
-    private string[] _mediatypes = [];
-
-    [Parameter]
-    public EventCallback<BookQuery> SearchClicked { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        _authors = await _bookService.GetAuthors();
-        _mediatypes = await _bookService.GetMediaTypes();
-    }
-
-    private void ToggleExpanded()
-    {
-        isExpanded = !isExpanded;
-    }
-
-    private async Task SearchBooks()
-    {
-        var query = new BookQuery(author, editionCode, mediaType, 0, 0);
-        await SearchClicked.InvokeAsync(query);
-    }
-}

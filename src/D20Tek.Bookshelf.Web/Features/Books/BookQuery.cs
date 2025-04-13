@@ -2,23 +2,26 @@
 
 public class BookQuery
 {
-    public Option<string> Author { get; } = Option<string>.None();
+    public Option<string> Author { get; }
 
-    public Option<string> EditionCode { get; } = Option<string>.None();
+    public Option<string> EditionCode { get; }
 
-    public Option<string> MediaType { get; } = Option<string>.None();
+    public Option<string> MediaType { get; }
 
     public int Take { get; }
 
     public int Skip { get; }
 
-    public BookQuery(string? author, string? editionCode, string? mediaType, int take, int skip)
+    public BookQuery(string author, string editionCode, string mediaType, int take, int skip)
     {
-        Author = author.ToOption();
-        EditionCode = editionCode.ToOption();
-        MediaType = mediaType.ToOption();
+        Author = ConvertString(author);
+        EditionCode = ConvertString(editionCode);
+        MediaType = ConvertString(mediaType);
         Take = take;
         Skip = skip;
 
     }
+
+    private static Option<string> ConvertString(string value) =>
+        string.IsNullOrEmpty(value) ? Option<string>.None() : value;
 }
