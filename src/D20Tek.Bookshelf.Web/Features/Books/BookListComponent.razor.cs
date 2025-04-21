@@ -5,25 +5,27 @@ public partial class BookListComponent
     private List<BookEntity>? _books;
     private Error[] _errors = [];
     private int _totalCount = 0;
+    private BookQuery _currentQuery = BookQuery.Empty;
 
-    protected override async Task OnInitializedAsync() => await SearchBooks(BookQuery.Empty);
+    protected override async Task OnInitializedAsync() => await SearchBooks(_currentQuery);
 
     private void NavigateToDetails(string id) => _nav.NavigateTo(Constants.Books.DetailsUrl(id));
 
     private async Task SearchBooks(BookQuery query)
     {
-        var results = await _service.GetByQuery(query)
+        _currentQuery = query;
+        var results = await _service.GetByQuery(_currentQuery)
                                     .HandleErrorAsync(e => _errors = e, new(0, []));
         _books = [.. results.Items];
         _totalCount = results.TotalCount;
     }
 
-    private async Task FetchMoreBooks(BookQuery query)
+    private async Task FetchMoreBooks()
     {
-        query.UpdateSkip(GetLocalBookCount());
-        var nextPage = await _service.GetByQuery(query)
+        _currentQuery.UpdateSkip(GetLocalBookCount());
+        var nextPage = await _service.GetByQuery(_currentQuery)
                                      .HandleErrorAsync(e => _errors = e, new(0, []));
-        _books?.AddRange();
+        _books?.AddRange(nextPage.Items);
     }
 
     private bool HasMorePages() => GetLocalBookCount() < _totalCount;

@@ -34,6 +34,10 @@ else
         }
         </tbody>
     </table>
+    @if (HasMorePages())
+    {
+        <button class="btn btn-outline-light" @onclick=FetchMoreBooks>More...</button>
+    }
 }
 
 <DisplayErrors Errors=@_errors />

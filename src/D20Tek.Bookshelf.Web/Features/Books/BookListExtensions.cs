@@ -17,13 +17,13 @@ internal static class BookListExtensions
             books = books.Where(b => b.Authors.Any(a => a.Name == author));
         }
 
-        if (query.Take > 0)
-        {
-            books = books.Take(query.Take);
-        }
         if (query.Skip > 0)
         {
             books = books.Skip(query.Skip);
+        }
+        if (query.Take > 0)
+        {
+            books = books.Take(query.Take);
         }
 
         return books;

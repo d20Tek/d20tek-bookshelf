@@ -21,7 +21,7 @@ public partial class BookListFilters
     private void ToggleExpanded() => isExpanded = !isExpanded;
 
     private async Task Search() =>
-        await SearchClicked.InvokeAsync(new(_author, _editionCode, _mediaType, 0, 0));
+        await SearchClicked.InvokeAsync(new(_author, _editionCode, _mediaType));
 
     private void ResetFilters()
     {
