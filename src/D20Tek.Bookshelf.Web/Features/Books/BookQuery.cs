@@ -10,7 +10,7 @@ public class BookQuery
 
     public int Take { get; }
 
-    public int Skip { get; }
+    public int Skip { get; private set; }
 
     public BookQuery(
         string author,
@@ -26,6 +26,8 @@ public class BookQuery
         Skip = skip;
     }
     public static BookQuery Empty => new(string.Empty, string.Empty, string.Empty);
+
+    public void UpdateSkip(int skip) => Skip = skip;
 
     private static Option<string> ConvertString(string value) =>
         string.IsNullOrEmpty(value) ? Option<string>.None() : value;

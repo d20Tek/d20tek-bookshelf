@@ -28,4 +28,22 @@ internal static class BookListExtensions
 
         return books;
     }
+
+    public static int GetFilteredCount(this IEnumerable<BookEntity> books, BookQuery query)
+    {
+        if (query.EditionCode.IsSome && query.EditionCode.Get() is string edition)
+        {
+            books = books.Where(b => b.Details.EditionCode == edition);
+        }
+        if (query.MediaType.IsSome && query.MediaType.Get() is string mediaType)
+        {
+            books = books.Where(b => b.Details.MediaType == mediaType);
+        }
+        if (query.Author.IsSome && query.Author.Get() is string author)
+        {
+            books = books.Where(b => b.Authors.Any(a => a.Name == author));
+        }
+
+        return books.Count();
+    }
 }

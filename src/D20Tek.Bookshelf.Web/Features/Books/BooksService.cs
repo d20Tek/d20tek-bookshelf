@@ -25,10 +25,10 @@ internal sealed class BooksService : IBooksService
                                 .First());
     }
 
-    public async Task<Result<IEnumerable<BookEntity>>> GetByQuery(BookQuery query)
+    public async Task<Result<PagedList<BookEntity>>> GetByQuery(BookQuery query)
     {
         var books = await GetCachedList();
-        return books.Map(b => b.ApplyFilters(query));
+        return books.Map(b => new PagedList<BookEntity>(b.GetFilteredCount(query), b.ApplyFilters(query)));
     }
 
     public IEnumerable<string> GetAuthors() => _cachedAuthors;
@@ -54,8 +54,8 @@ internal sealed class BooksService : IBooksService
     {
         _cachedBooks = books;
         _cachedMediaTypes = books.Select(b => b.Details.MediaType)
-                              .Distinct()
-                              .OrderBy(m => m);
+                                 .Distinct()
+                                 .OrderBy(m => m);
         _cachedAuthors = books.SelectMany(b => b.Authors)
                               .Select(a => a.Name)
                               .Distinct()
