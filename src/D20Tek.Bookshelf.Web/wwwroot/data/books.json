@@ -235,5 +235,60 @@
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17004/dungeon-master-s-guide-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Dungeon_Master%27s_Guide#Advanced_Dungeons_&_Dragons" }
     ]
+  },
+  {
+    "id": "TSR-9031",
+    "title": "The Rogues Gallery",
+    "authors": [
+      { "name": "Brian Blume", "url": "https://en.wikipedia.org/wiki/Brian_Blume" },
+      { "name": "Dave Cook", "url": "https://en.wikipedia.org/wiki/David_Cook_(game_designer)" },
+      { "name": "Jean Wells", "url": "https://en.wikipedia.org/wiki/Jean_Wells" }
+    ],
+    "description": [ "The AD&D First Edition Rogues Gallery, published by TSR in 1980, is a supplement designed to assist Dungeon Masters by providing a wide array of pre-generated non-player characters (NPCs). Compiled by Brian Blume with contributions from TSR staff, it features everything from lowly henchmen to powerful villains, ready for immediate use in any campaign. The book also includes random NPC generation tables and even showcases some of the famous characters from the original creators' own home games. It serves as a versatile resource for adding depth, unpredictability, and memorable encounters to AD&D adventures." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "1980",
+      "imageLink": "images/books/1ed-rogues-gallery.jpg",
+      "pages": 48,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-9031",
+      "isbn": "0-935696-18-0"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3Gj4FuQ" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+The+Rogues+Gallery" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17024/the-rogues-gallery-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/The_Rogues_Gallery" }
+    ]
+  },
+  {
+    "id": "TSR-2013",
+    "title": "Deities & Demigods",
+    "authors": [
+      { "name": "James Ward", "url": "https://en.wikipedia.org/wiki/Jim_Ward_(game_designer)" },
+      { "name": "Robert Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" }
+    ],
+    "description": [ "The AD&D First Edition Deities & Demigods, published by TSR in 1980, is a hardcover supplement that presents mythological and fantasy pantheons for use in Advanced Dungeons & Dragons campaigns. Compiled by James M. Ward with help from Robert J. Kuntz, the book details gods, heroes, and monsters from a variety of real-world mythologies and fictional universes. Each deity is given game statistics, lore, and artwork, allowing Dungeon Masters to incorporate divine powers and legendary figures into their worlds. It became a classic resource, notable for its ambitious scope and early inclusion of licensed settings like Cthulhu Mythos and Melniboné." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Dec 1980",
+      "imageLink": "images/books/1ed-deities-demigods.jpg",
+      "pages": 144,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2013",
+      "isbn": "0-935696-22-9"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3GiA40u" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Deities+%26+Demigods" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/110198/deities-demigods-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Deities_%26_Demigods#1st_Edition_Advanced_Dungeons_&_Dragons" }
+    ]
   }
 ]
