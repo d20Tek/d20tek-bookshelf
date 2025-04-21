@@ -13,7 +13,7 @@ else if (_books.Any() is false)
 }
 else
 {
-    <table class="table table-fixed table-sm w-100">
+    <table class="table table-fixed table-sm w-100 mb-1">
         <tbody>
         @foreach (var book in _books)
         {
@@ -36,7 +36,7 @@ else
     </table>
     @if (HasMorePages())
     {
-        <button class="btn btn-outline-light" @onclick=FetchMoreBooks>More...</button>
+        <button class="btn btn-outline-light mb-2" @onclick=FetchMoreBooks>More...</button>
     }
 }
 
