@@ -290,5 +290,83 @@
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/110198/deities-demigods-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Deities_%26_Demigods#1st_Edition_Advanced_Dungeons_&_Dragons" }
     ]
+  },
+  {
+    "id": "TSR-2012",
+    "title": "Fiend Folio",
+    "authors": [
+      { "name": "Don Turnbull", "url": "https://en.wikipedia.org/wiki/Don_Turnbull_(game_designer)" }
+    ],
+    "description": [ "The AD&D First Edition Fiend Folio, published in 1981, is a hardcover monster compendium that expands the roster of creatures available for Advanced Dungeons & Dragons campaigns. Edited by Don Turnbull and originating from contributions to the British magazine White Dwarf, the book features over 150 new monsters, including now-iconic creatures like the Githyanki, Death Knight, and Slaad. The Fiend Folio brought a darker, more alien flavor to the AD&D bestiary, showcasing imaginative and often bizarre monster designs. It quickly became a beloved, if sometimes controversial, addition to the game's early monster manuals." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Aug 1981",
+      "imageLink": "images/books/1ed-fiend-folio.jpg",
+      "pages": 128,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2012",
+      "isbn": "0-935696-21-0"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/4iv46v7" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Fiend+Folio" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/50012/fiend-folio-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Fiend_Folio#Advanced_Dungeons_&_Dragons_1st_edition" }
+    ]
+  },
+  {
+    "id": "TSR-2016",
+    "title": "Monster Manual II",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
+    ],
+    "description": [ "The AD&D First Edition Monster Manual II, published in 1983, is the second major hardcover collection of monsters for Advanced Dungeons & Dragons. Compiled and written by Gary Gygax, this volume expands the AD&D bestiary with hundreds of new creatures, many drawn from Gygax's ongoing World of Greyhawk campaign. It introduces a wide variety of monsters, from new demons and giants to exotic underdark creatures and planar beings. Monster Manual II also refines monster groupings and encounter tables, making it an essential resource for Dungeon Masters looking to challenge even experienced adventuring parties." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Dec 1983",
+      "imageLink": "images/books/1ed-monster-manual-2.jpg",
+      "pages": 160,
+      "mediaType": "Rulebook"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2016",
+      "isbn": "0-88038-031-4"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3YBLbYr" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Monster+Manual+II" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17005/monster-manual-ii-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Monster_Manual_II#Advanced_Dungeons_&_Dragons" }
+    ]
+  },
+  {
+    "id": "TSR-2017",
+    "title": "Unearthed Arcana",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" }
+    ],
+    "description": [ "The AD&D First Edition Unearthed Arcana, published in 1985, is a hardcover rules expansion written by Gary Gygax. It introduces new character classes, races, spells, and equipment, offering players and Dungeon Masters a wealth of new options to enhance their campaigns. Many of its contents were drawn from material originally published in Dragon magazine and Gygax’s home Greyhawk campaign. While influential and widely used, Unearthed Arcana also sparked debate for introducing some powerful and sometimes unbalanced elements into the game." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Dec 1985",
+      "imageLink": "images/books/1ed-unearthed-arcana.jpg",
+      "pages": 128,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2017",
+      "isbn": "0-88038-084-5"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3GmjI71" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Unearthed+Arcana" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/170096/unearthed-arcana-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Unearthed_Arcana#Advanced_Dungeons_&_Dragons" }
+    ]
   }
 ]
