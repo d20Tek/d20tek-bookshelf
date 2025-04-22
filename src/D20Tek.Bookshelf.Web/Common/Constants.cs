@@ -8,9 +8,10 @@ internal static partial class Constants
 
     public static int ServiceSleepDelay { get; internal set; } = 0;
 
-    public const string DonationUrl = "https://ko-fi.com/V7V8UGPMB";
+    public const int BootstrapMdBreakpoint = 768;
+    public const string WindowWidthFuncName = "blazorGetWindowWidth";
 
-    public const string ServiceHealthUrl = "/api/v1/health";
+    public const string DonationUrl = "https://ko-fi.com/V7V8UGPMB";
 
     public const string UnexpectedServiceMessage = "Unexpected server error from backend service.";
 

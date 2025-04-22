@@ -1,13 +1,14 @@
 ﻿@inject IBooksService _bookService;
+@inject IJSRuntime _jSRuntime;
 
 <button class="btn btn-link text-decoration-none d-flex align-items-center" type="button"
-data-bs-toggle="collapse" data-bs-target="#filterForm"
-aria-expanded="true" aria-controls="filterForm"
-@onclick="ToggleExpanded">
+        data-bs-toggle="collapse" data-bs-target="#filterForm"
+        aria-expanded="@isExpanded" aria-controls="filterForm"
+        @onclick="ToggleExpanded">
     <i class="bi @(isExpanded ? "bi-chevron-down" : "bi-chevron-right")" style="transition: transform 0.3s;"></i>
     <span class="ms-2">Filters</span>
 </button>
-<div class="collapse mb-2" id="filterForm">
+<div class="collapse mb-2 @(isExpanded ? "show" : "")" id="filterForm">
     <EditForm class="row mx-1 border" Model="@this">
         <div class="col-12 col-md-3 mb-2">
             <label for="filterAuthor" class="form-label">Author</label>

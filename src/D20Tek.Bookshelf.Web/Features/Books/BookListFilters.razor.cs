@@ -18,6 +18,16 @@ public partial class BookListFilters
         _mediatypes = _bookService.GetMediaTypes();
     }
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var width = await _jSRuntime.InvokeAsync<int>(Constants.WindowWidthFuncName, null);
+            isExpanded = width >= Constants.BootstrapMdBreakpoint;
+            StateHasChanged();
+        }
+    }
+
     private void ToggleExpanded() => isExpanded = !isExpanded;
 
     private async Task Search() =>
