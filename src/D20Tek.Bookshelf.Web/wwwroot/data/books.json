@@ -268,8 +268,8 @@
     "id": "TSR-2013",
     "title": "Deities & Demigods",
     "authors": [
-      { "name": "James Ward", "url": "https://en.wikipedia.org/wiki/Jim_Ward_(game_designer)" },
-      { "name": "Robert Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" }
+      { "name": "James M. Ward", "url": "https://en.wikipedia.org/wiki/Jim_Ward_(game_designer)" },
+      { "name": "Robert J. Kuntz", "url": "https://en.wikipedia.org/wiki/Robert_J._Kuntz" }
     ],
     "description": [ "The AD&D First Edition Deities & Demigods, published by TSR in 1980, is a hardcover supplement that presents mythological and fantasy pantheons for use in Advanced Dungeons & Dragons campaigns. Compiled by James M. Ward with help from Robert J. Kuntz, the book details gods, heroes, and monsters from a variety of real-world mythologies and fictional universes. Each deity is given game statistics, lore, and artwork, allowing Dungeon Masters to incorporate divine powers and legendary figures into their worlds. It became a classic resource, notable for its ambitious scope and early inclusion of licensed settings like Cthulhu Mythos and Melniboné." ],
     "details": {
@@ -367,6 +367,86 @@
       { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Unearthed+Arcana" },
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/170096/unearthed-arcana-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Unearthed_Arcana#Advanced_Dungeons_&_Dragons" }
+    ]
+  },
+  {
+    "id": "TSR-2018",
+    "title": "Oriental Adventures",
+    "authors": [
+      { "name": "Gary Gygax", "url": "https://en.wikipedia.org/wiki/Gary_Gygax" },
+      { "name": "David 'Zeb' Cook", "url": "https://en.wikipedia.org/wiki/David_%22Zeb%22_Cook" },
+      { "name": "François Marcela-Froideval", "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Marcela-Froideval" }
+    ],
+    "description": [ "The AD&D First Edition Oriental Adventures, published in 1985, brings a new cultural flavor to Advanced Dungeons & Dragons with rules inspired by East Asian mythology, history, and folklore. Written by David 'Zeb' Cook, the book introduces new character classes like the samurai and wu jen, as well as new races, spells, and monsters. It offers a complete ruleset for running campaigns set in a world influenced by medieval Asian cultures. Oriental Adventures expanded the horizons of AD&D, blending traditional fantasy with rich, exotic themes." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Oct 1985",
+      "imageLink": "images/books/1ed-oriental-adventures.jpg",
+      "pages": 144,
+      "mediaType": "Setting"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2018",
+      "isbn": "0-88038-099-3"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/4jnkcbI" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Oriental+Adventures" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17334/oriental-adventures-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Oriental_Adventures#Advanced_Dungeons_&_Dragons" }
+    ]
+  },
+  {
+    "id": "TSR-2019",
+    "title": "Dungeoneer's Survival Guide",
+    "authors": [
+      { "name": "Douglas Niles", "url": "https://en.wikipedia.org/wiki/Douglas_Niles" }
+    ],
+    "description": [ "The AD&D First Edition Dungeoneer's Survival Guide, published in 1986, is a hardcover supplement focused on adventuring in underground environments. Written by Douglas Niles, it introduces rules for spelunking, three-dimensional movement, and surviving the hazards of deep subterranean exploration. The book also expands the skills available to characters through the introduction of the nonweapon proficiency system. Dungeoneer's Survival Guide provides Dungeon Masters and players with the tools to create richer, more challenging adventures beneath the surface of their worlds." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Jun 1986",
+      "imageLink": "images/books/1ed-dungeoneers-survival-guide.jpg",
+      "pages": 128,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2019",
+      "isbn": "0-39455-415-9"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3Gltsyh" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Dungeoneer%27s+Survival+Guide" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17006/dungeoneer-s-survival-guide-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Dungeoneer%27s_Survival_Guide" }
+    ]
+  },
+  {
+    "id": "TSR-2020",
+    "title": "Wilderness Survival Guide",
+    "authors": [
+      { "name": "Kim Mohan", "url": "https://en.wikipedia.org/wiki/Kim_Mohan" }
+    ],
+    "description": [ "The AD&D First Edition Wilderness Survival Guide, published in 1986, is a hardcover supplement that explores the challenges of adventuring in the wilds beyond the dungeon. Written by Kim Mohan, it expands the rules for travel, weather, environmental hazards, and survival in forests, mountains, deserts, and more. Like its counterpart, the Dungeoneer's Survival Guide, it also develops the nonweapon proficiency system for characters. Wilderness Survival Guide adds depth and realism to outdoor adventures, giving Dungeon Masters the tools to create more dynamic and dangerous wilderness campaigns." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Oct 1986",
+      "imageLink": "images/books/1ed-wilderness-survival-guide.png",
+      "pages": 128,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2020",
+      "isbn": "0-88038-291-0"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/42EIczX" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Wilderness+Survival+Guide" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17007/wilderness-survival-guide-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Wilderness_Survival_Guide" }
     ]
   }
 ]
