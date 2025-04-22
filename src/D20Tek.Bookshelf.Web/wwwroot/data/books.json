@@ -448,5 +448,84 @@
       { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17007/wilderness-survival-guide-1e" },
       { "source": 3, "url": "https://en.wikipedia.org/wiki/Wilderness_Survival_Guide" }
     ]
+  },
+  {
+    "id": "TSR-2022",
+    "title": "Manual of the Planes",
+    "authors": [
+      { "name": "Jeff Grubb", "url": "https://en.wikipedia.org/wiki/Jeff_Grubb" }
+    ],
+    "description": [ "The AD&D First Edition Wilderness Survival Guide, published in 1986, is a hardcover supplement that explores the challenges of adventuring in the wilds beyond the dungeon. Written by Kim Mohan, it expands the rules for travel, weather, environmental hazards, and survival in forests, mountains, deserts, and more. Like its counterpart, the Dungeoneer's Survival Guide, it also develops the nonweapon proficiency system for characters. Wilderness Survival Guide adds depth and realism to outdoor adventures, giving Dungeon Masters the tools to create more dynamic and dangerous wilderness campaigns." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Oct 1986",
+      "imageLink": "images/books/1ed-manual-of-the-planes.jpg",
+      "pages": 128,
+      "mediaType": "Supplement"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2022",
+      "isbn": "0-88038-399-2"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/3Gl1QJF" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Manual+of+the+Planes" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17009/manual-of-the-planes-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Manual_of_the_Planes#Advanced_Dungeons_&_Dragons_first_edition" }
+    ]
+  },
+  {
+    "id": "TSR-2021",
+    "title": "Dragonlance Adventures",
+    "authors": [
+      { "name": "Tracy Hickman", "url": "https://en.wikipedia.org/wiki/Tracy_Hickman" },
+      { "name": "Margaret Weis", "url": "https://en.wikipedia.org/wiki/Margaret_Weis" }
+    ],
+    "description": [ "The AD&D First Edition Dragonlance Adventures, published in 1987, is the definitive guide to the world of Krynn, home to the Dragonlance saga. Written by Tracy Hickman and Margaret Weis, it presents the deities, races, classes, magic, and history unique to the setting, allowing players to create characters and run campaigns steeped in Dragonlance lore. The book expands on the events of the novels and modules, offering rules for playing Knights of Solamnia, Wizards of High Sorcery, and other iconic roles. Dragonlance Adventures captures the heroic, high-fantasy spirit that made the setting a cornerstone of D&D history." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Oct 1987",
+      "imageLink": "images/books/1ed-dragonlance-adventures.jpg",
+      "pages": 128,
+      "mediaType": "Setting"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2021",
+      "isbn": "0-88038-452-2"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/4jlFbLT" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Dragonlance+Adventures" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/162788/dragonlance-adventures-1e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Dragonlance_Adventures" }
+    ]
+  },
+  {
+    "id": "TSR-2023",
+    "title": "Greyhawk Adventures",
+    "authors": [
+      { "name": "James M. Ward", "url": "https://en.wikipedia.org/wiki/Jim_Ward_(game_designer)" }
+    ],
+    "description": [ "The AD&D First Edition Greyhawk Adventures, published in 1988, is a hardcover supplement that expands on the legendary world of Greyhawk, one of D&D’s earliest and most influential settings. Written by James M. Ward, it blends first and second edition rules, offering new monsters, magic items, deities, and legendary heroes drawn from Gary Gygax’s original campaign. The book provides a wealth of material for Dungeon Masters looking to deepen their Greyhawk campaigns, including detailed encounters and lore. Greyhawk Adventures serves as both a tribute to the game's roots and a bridge to the evolving future of Dungeons & Dragons." ],
+    "details": {
+      "editionCode": "1ed",
+      "publisher": "TSR, Inc",
+      "publishedOn": "Sept 1988",
+      "imageLink": "images/books/1ed-greyhawk-adventures.jpg",
+      "pages": 128,
+      "mediaType": "Setting"
+    },
+    "altIds": {
+      "tsrNum": "TSR-2023",
+      "isbn": "0-88038-649-5"
+    },
+    "links": [
+      { "source": 0, "url": "https://amzn.to/4k4zlyH" },
+      { "source": 1, "url": "https://www.ebay.com/sch/i.html?_nkw=TSR+1e+AD%26D+Greyhawk+Adventures" },
+      { "source": 2, "url": "https://www.drivethrurpg.com/en/product/17407/greyhawk-adventures-1e-2e" },
+      { "source": 3, "url": "https://en.wikipedia.org/wiki/Greyhawk_Adventures" }
+    ]
   }
 ]
