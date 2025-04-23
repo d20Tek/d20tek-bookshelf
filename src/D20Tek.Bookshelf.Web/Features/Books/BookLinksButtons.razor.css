@@ -16,6 +16,14 @@
     background-repeat: no-repeat;
 }
 
+.ebay-logo-image {
+    width: 22px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
 .logo-image {
     width: 14px;
     height: 16px;
