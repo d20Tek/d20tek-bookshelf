@@ -20,7 +20,7 @@ public partial class BookListFilters
         public static Filters Empty => new(string.Empty, string.Empty, string.Empty);
     }
 
-    private Filters _filters = Filters.Empty;
+    private Filters? _filters;
     private bool isExpanded = false;
     private IEnumerable<string> _authors = [];
     private IEnumerable<string> _mediatypes = [];
@@ -28,11 +28,17 @@ public partial class BookListFilters
     [Parameter]
     public EventCallback<BookQuery> SearchClicked { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         _authors = _bookService.GetAuthors();
         _mediatypes = _bookService.GetMediaTypes();
 
+        // todo: fix authors and media types lists empty because books file wasn't loaded yet.
+        // need to make sure books loaded during these get methods.
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
         _filters = await _storage.GetItemAsync<Filters>(Constants.Books.BookFiltersKey) ?? Filters.Empty;
     }
 
@@ -51,7 +57,7 @@ public partial class BookListFilters
     private async Task Search()
     {
         await _storage.SetItemAsync(Constants.Books.BookFiltersKey, _filters);
-        await SearchClicked.InvokeAsync(new(_filters.Author, _filters.EditionCode, _filters.MediaType));
+        await SearchClicked.InvokeAsync(new(_filters!.Author, _filters.EditionCode, _filters.MediaType));
     }
 
     private async Task ResetFilters()

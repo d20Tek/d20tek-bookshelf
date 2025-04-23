@@ -2,6 +2,8 @@
 @inject ILocalStorageService _storage;
 @inject IJSRuntime _jSRuntime;
 
+@if(_filters is not null)
+{
 <button class="btn btn-link text-decoration-none d-flex align-items-center" type="button"
         data-bs-toggle="collapse" data-bs-target="#filterForm"
         aria-expanded="@isExpanded" aria-controls="filterForm"
@@ -47,3 +49,4 @@
         </div>
     </EditForm>
 </div>
+}
