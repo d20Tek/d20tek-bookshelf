@@ -2,26 +2,8 @@
 
 public partial class BookListFilters
 {
-    public class Filters
-    {
-        public string Author { get; set; }
-
-        public string EditionCode { get; set; }
-
-        public string MediaType { get; set; }
-
-        public Filters(string author, string editionCode, string mediaType)
-        {
-            Author = author;
-            EditionCode = editionCode;
-            MediaType = mediaType;
-        }
-
-        public static Filters Empty => new(string.Empty, string.Empty, string.Empty);
-    }
-
-    private Filters? _filters;
-    private bool isExpanded = false;
+    private Filters _filters = Filters.Empty;
+    private bool _isExpanded = false;
     private IEnumerable<string> _authors = [];
     private IEnumerable<string> _mediatypes = [];
 
@@ -35,22 +17,22 @@ public partial class BookListFilters
         _filters = await _storage.GetItemAsync<Filters>(Constants.Books.BookFiltersKey) ?? Filters.Empty;
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override Task OnAfterRenderAsync(bool firstRender) =>
+        (firstRender) ? GetExpansionState() : Task.CompletedTask;
+
+    private async Task GetExpansionState()
     {
-        if (firstRender)
-        {
-            var width = await _jSRuntime.InvokeAsync<int>(Constants.WindowWidthFuncName, null);
-            isExpanded = width >= Constants.BootstrapMdBreakpoint;
-            StateHasChanged();
-        }
+        var width = await _jSRuntime.InvokeAsync<int>(Constants.WindowWidthFuncName, null);
+        _isExpanded = width >= Constants.BootstrapMdBreakpoint;
+        StateHasChanged();
     }
 
-    private void ToggleExpanded() => isExpanded = !isExpanded;
+    private void ToggleExpanded() => _isExpanded = !_isExpanded;
 
     private async Task Search()
     {
         await _storage.SetItemAsync(Constants.Books.BookFiltersKey, _filters);
-        await SearchClicked.InvokeAsync(new(_filters!.Author, _filters.EditionCode, _filters.MediaType));
+        await SearchClicked.InvokeAsync(new(_filters.Author, _filters.EditionCode, _filters.MediaType));
     }
 
     private async Task ResetFilters()
