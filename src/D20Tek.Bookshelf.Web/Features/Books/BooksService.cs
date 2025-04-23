@@ -31,9 +31,17 @@ internal sealed class BooksService : IBooksService
         return books.Map(b => new PagedList<BookEntity>(b.GetFilteredCount(query), b.ApplyFilters(query)));
     }
 
-    public IEnumerable<string> GetAuthors() => _cachedAuthors;
+    public async Task<IEnumerable<string>> GetAuthors()
+    {
+        _ = await GetCachedList();
+        return _cachedAuthors;
+    }
 
-    public IEnumerable<string> GetMediaTypes() => _cachedMediaTypes;
+    public async Task<IEnumerable<string>> GetMediaTypes()
+    {
+        _ = await GetCachedList();
+        return _cachedMediaTypes;
+    }
 
     private async Task<Result<IEnumerable<BookEntity>>> GetCachedList()
     {

@@ -28,17 +28,10 @@ public partial class BookListFilters
     [Parameter]
     public EventCallback<BookQuery> SearchClicked { get; set; }
 
-    protected override void OnInitialized()
-    {
-        _authors = _bookService.GetAuthors();
-        _mediatypes = _bookService.GetMediaTypes();
-
-        // todo: fix authors and media types lists empty because books file wasn't loaded yet.
-        // need to make sure books loaded during these get methods.
-    }
-
     protected override async Task OnInitializedAsync()
     {
+        _authors = await _bookService.GetAuthors();
+        _mediatypes = await _bookService.GetMediaTypes();
         _filters = await _storage.GetItemAsync<Filters>(Constants.Books.BookFiltersKey) ?? Filters.Empty;
     }
 
