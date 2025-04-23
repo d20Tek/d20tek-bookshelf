@@ -1,4 +1,5 @@
-﻿using D20Tek.Bookshelf.Web.Features.Books;
+﻿using Blazored.LocalStorage;
+using D20Tek.Bookshelf.Web.Features.Books;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -30,7 +31,8 @@ public static class DependencyInjection
 
     private static WebAssemblyHostBuilder AddServices(this WebAssemblyHostBuilder builder)
     {
-        builder.Services.AddScoped<IBooksService, BooksService>();
+        builder.Services.AddBlazoredLocalStorage()
+                        .AddScoped<IBooksService, BooksService>();
 
         return builder;
     }

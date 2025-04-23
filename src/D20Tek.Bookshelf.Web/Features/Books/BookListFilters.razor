@@ -1,4 +1,5 @@
 ﻿@inject IBooksService _bookService;
+@inject ILocalStorageService _storage;
 @inject IJSRuntime _jSRuntime;
 
 <button class="btn btn-link text-decoration-none d-flex align-items-center" type="button"
@@ -9,10 +10,10 @@
     <span class="ms-2">Filters</span>
 </button>
 <div class="collapse mb-2 @(isExpanded ? "show" : "")" id="filterForm">
-    <EditForm class="row mx-1 border" Model="@this">
+    <EditForm class="row mx-1 border" Model="@_filters">
         <div class="col-12 col-md-3 mb-2">
             <label for="filterAuthor" class="form-label">Author</label>
-            <InputSelect id="filterAuthor" class="form-control" required @bind-Value="_author">
+            <InputSelect id="filterAuthor" class="form-control" required @bind-Value="_filters.Author">
                 <option class="text-muted" selected value="">All authors</option>
                 @foreach (var author in _authors)
                 {
@@ -22,7 +23,7 @@
         </div>
         <div class="col-12 col-md-3 mb-2">
             <label for="filterEdition" class="form-label">Edition</label>
-            <InputSelect id="filterEdition" class="form-control" required @bind-Value="_editionCode">
+            <InputSelect id="filterEdition" class="form-control" required @bind-Value="_filters.EditionCode">
                 <option class="text-muted" selected value="">All editions</option>
                 @foreach(var ed in Editions.GetEditions())
                 {
@@ -32,7 +33,7 @@
         </div>
         <div class="col-12 col-md-3 mb-2">
             <label for="filterMediaType" class="form-label">Media type</label>
-            <InputSelect id="filterMediaType" class="form-control" required @bind-Value="_mediaType">
+            <InputSelect id="filterMediaType" class="form-control" required @bind-Value="_filters.MediaType">
                 <option class="text-muted" selected value="">All media types</option>
                 @foreach (var mt in _mediatypes)
                 {

@@ -10,6 +10,8 @@ internal static partial class Constants
 
         public const int DefaultPageSize = 10;
 
+        public const string BookFiltersKey = "BookFilters";
+
         public static Failure<T> NotFoundError<T>(string id) where T : notnull =>
             Error.NotFound("BookEntity.NotFound", $"Book with id={id} not found.");
 

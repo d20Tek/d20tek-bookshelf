@@ -2,9 +2,25 @@
 
 public partial class BookListFilters
 {
-    public string _author = string.Empty;
-    public string _editionCode = string.Empty;
-    public string _mediaType = string.Empty;
+    public class Filters
+    {
+        public string Author { get; set; }
+
+        public string EditionCode { get; set; }
+
+        public string MediaType { get; set; }
+
+        public Filters(string author, string editionCode, string mediaType)
+        {
+            Author = author;
+            EditionCode = editionCode;
+            MediaType = mediaType;
+        }
+
+        public static Filters Empty => new(string.Empty, string.Empty, string.Empty);
+    }
+
+    private Filters _filters = Filters.Empty;
     private bool isExpanded = false;
     private IEnumerable<string> _authors = [];
     private IEnumerable<string> _mediatypes = [];
@@ -12,10 +28,12 @@ public partial class BookListFilters
     [Parameter]
     public EventCallback<BookQuery> SearchClicked { get; set; }
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         _authors = _bookService.GetAuthors();
         _mediatypes = _bookService.GetMediaTypes();
+
+        _filters = await _storage.GetItemAsync<Filters>(Constants.Books.BookFiltersKey) ?? Filters.Empty;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -30,13 +48,15 @@ public partial class BookListFilters
 
     private void ToggleExpanded() => isExpanded = !isExpanded;
 
-    private async Task Search() =>
-        await SearchClicked.InvokeAsync(new(_author, _editionCode, _mediaType));
-
-    private void ResetFilters()
+    private async Task Search()
     {
-        _author = string.Empty;
-        _editionCode = string.Empty;
-        _mediaType = string.Empty;
+        await _storage.SetItemAsync(Constants.Books.BookFiltersKey, _filters);
+        await SearchClicked.InvokeAsync(new(_filters.Author, _filters.EditionCode, _filters.MediaType));
+    }
+
+    private async Task ResetFilters()
+    {
+        _filters = Filters.Empty;
+        await _storage.RemoveItemAsync(Constants.Books.BookFiltersKey);
     }
 }
