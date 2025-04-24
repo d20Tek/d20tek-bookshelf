@@ -40,7 +40,7 @@ public static class DependencyInjection
         {
             builder.Configuration.Bind(_authConfigSection, options.ProviderOptions);
             options.ProviderOptions.ResponseType = _authResponseType;
-            options.ProviderOptions.AdditionalProviderParameters.Add(_authAudience, builder.GetAudienceConfig());
+            //options.ProviderOptions.AdditionalProviderParameters.Add(_authAudience, builder.GetAudienceConfig());
         });
 
         return builder;

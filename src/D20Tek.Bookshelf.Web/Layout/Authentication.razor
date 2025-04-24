@@ -10,8 +10,10 @@
         @{
             var authority = Configuration["Auth0:Authority"];
             var clientId = Configuration["Auth0:ClientId"];
+            var returnTo = Navigation.BaseUri.TrimEnd('/');
 
-            Navigation.NavigateTo($"{authority}/v2/logout?client_id={clientId}");
+            var logoutUrl = $"{authority}/v2/logout?client_id={clientId}&returnTo={Uri.EscapeDataString(returnTo)}";
+            Navigation.NavigateTo(logoutUrl, true);
         }
     </LogOut>
 </RemoteAuthenticatorView>
