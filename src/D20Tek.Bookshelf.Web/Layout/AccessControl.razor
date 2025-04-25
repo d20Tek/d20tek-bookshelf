@@ -3,8 +3,10 @@
 
 <AuthorizeView>
     <Authorized>
-        Hello, @context.User.Identity?.Name!
-        <a href="#" @onclick="BeginSignOut">Log out</a>
+        <span class="text-end responsive-small">
+            Hello, @context.User.Identity?.Name!
+            <a href="#" @onclick="BeginSignOut">Log out</a>
+        </span>
     </Authorized>
     <NotAuthorized>
         <a href="authentication/login">Log in</a>

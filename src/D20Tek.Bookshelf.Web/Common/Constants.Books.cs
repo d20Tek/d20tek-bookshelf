@@ -18,6 +18,6 @@ internal static partial class Constants
         public const string AffiliateSuffixEbay =
             "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339107475&customid=d20TekBooks&toolid=10001&mkevt=1";
 
-        public const string AffiliateSuffixDriveThruRpg = "?affiliate_id=1234567";
+        public const string AffiliateSuffixDriveThruRpg = "?affiliate_id=2967047";
     }
 }
